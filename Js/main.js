@@ -6,7 +6,7 @@ var cObj;
 var fObj;
 
 // GET THE CONDITIONS
-weatherConditions.open('GET', 'http://api.openweathermap.org/data/2.5/weather?zip=2000,au&appid=3e7209c8e05f61290db5d8afafbf50c2&units=imperial', true);
+weatherConditions.open('GET', '//api.openweathermap.org/data/2.5/weather?zip=2000,au&appid=3e7209c8e05f61290db5d8afafbf50c2&units=imperial', true);
 weatherConditions.responseType = 'text';
 weatherConditions.send(null);
 
@@ -39,7 +39,7 @@ weatherConditions.onload = function() {
 
 
 // GET THE FORECARST
-weatherForecast.open('GET', 'http://api.openweathermap.org/data/2.5/forecast?zip=2000,au&appid=3e7209c8e05f61290db5d8afafbf50c2&units=imperial', true);
+weatherForecast.open('GET', '//api.openweathermap.org/data/2.5/forecast?zip=2000,au&appid=3e7209c8e05f61290db5d8afafbf50c2&units=imperial', true);
 weatherForecast.responseType = 'text'; 
 weatherForecast.send();
 
@@ -53,7 +53,7 @@ document.getElementById('r1c1').innerHTML = date_raw;
 
 //Open Weather Icon
 var iconcode = fObj.list[0].weather[0].icon;
-var icon_path = `http://openweathermap.org/img/w/${iconcode}.png`;
+var icon_path = `//openweathermap.org/img/w/${iconcode}.png`;
 
 
 document.getElementById('r1c2').src = icon_path;
@@ -67,8 +67,8 @@ console.log(fObj);
 document.getElementById('r2c1').innerHTML = date_raw;
 
 //Open Weather Icon
-var iconcode = fObj.list[8].weather[0].icon;
-var icon_path = `http://openweathermap.org/img/w/${iconcode}.png`;
+ iconcode = fObj.list[8].weather[0].icon;
+ icon_path = `//openweathermap.org/img/w/${iconcode}.png`;
 
 
 document.getElementById('r2c2').src = icon_path;
@@ -83,7 +83,7 @@ document.getElementById('r3c1').innerHTML = date_raw;
 
 //Open Weather Icon
  iconcode = fObj.list[16].weather[0].icon;
-icon_path = `http://openweathermap.org/img/w/${iconcode}.png`;
+icon_path = `//openweathermap.org/img/w/${iconcode}.png`;
 
 
 document.getElementById('r3c2').src = icon_path;
